@@ -19,9 +19,8 @@ public class EmployeeDashboardController {
     private void initialize() {
         if (makeBookingBtn != null && handlePaymentsBtn != null && logoutBtn != null && viewBookingsBtn != null) {
             makeBookingBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/ParentRoot/make_bookings.fxml"));
-            handlePaymentsBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/payments.fxml"));
-            viewBookingsBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/ParentRoot/view_bookings.fxml"
-            ));
+            handlePaymentsBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/handle_payments.fxml")); // ✅ fixed path
+            viewBookingsBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/ParentRoot/view_bookings.fxml"));
             logoutBtn.setOnAction(event -> switchScene("/com/example/VehicleRentalSystem/login.fxml"));
         } else {
             System.err.println("Error: Buttons are not properly initialized.");
@@ -30,23 +29,17 @@ public class EmployeeDashboardController {
 
     private void switchScene(String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath)); // ✅ use the parameter
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
 
-            if (root != null) {
-                Stage stage = (Stage) makeBookingBtn.getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.setTitle("Vehicle Rental System");
-                stage.show();
-            } else {
-                System.err.println(" Failed to load FXML: " + fxmlPath);
-            }
+            Stage stage = (Stage) makeBookingBtn.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Vehicle Rental System");
+            stage.show();
 
         } catch (IOException e) {
-            System.err.println(" Error loading FXML: " + fxmlPath);
+            System.err.println("❌ Error loading FXML: " + fxmlPath);
             e.printStackTrace();
         }
     }
-
-
 }

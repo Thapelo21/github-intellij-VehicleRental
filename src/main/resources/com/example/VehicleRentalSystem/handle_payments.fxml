@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.HandlePaymentsController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-padding: 30; -fx-background-color: #f4f4f4;"
+      prefWidth="600" prefHeight="650">
+
+    <!-- Title Label -->
+    <Label text="Handle Payments"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+
+    <!-- Input Fields -->
+    <TextField fx:id="bookingIdField" promptText="Booking ID" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+    <TextField fx:id="amountField" promptText="Amount" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+    <TextField fx:id="lateFeeField" promptText="Late Fee (optional)" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+
+    <ComboBox fx:id="methodBox" promptText="Payment Method" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+
+    <!-- Buttons -->
+    <HBox spacing="15">
+        <Button text="Submit" onAction="#handlePayment"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-cursor: hand;"/>
+        <Button text="Edit" onAction="#editPayment"
+                style="-fx-background-color: #ffa500; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-cursor: hand;"/>
+        <Button text="Delete" onAction="#deletePayment"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Table View for Payments -->
+    <TableView fx:id="paymentTable" prefHeight="300" prefWidth="550" style="-fx-background-color: #ffffff; -fx-border-color: #ccc; -fx-border-radius: 5px;">
+        <columns>
+            <TableColumn fx:id="paymentIdCol" text="Payment ID"/>
+            <TableColumn fx:id="bookingIdCol" text="Booking ID"/>
+            <TableColumn fx:id="amountCol" text="Amount"/>
+            <TableColumn fx:id="lateFeeCol" text="Late Fee"/>
+            <TableColumn fx:id="methodCol" text="Method"/>
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button text="Back" onAction="#goBack"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-cursor: hand;"/>
+</VBox>

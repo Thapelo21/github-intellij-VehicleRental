@@ -32,8 +32,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" object-ref="schemas/vehicle_rental/tables/vehicles" />
-      <object connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" object-ref="schemas/vehicle_rental/tables/users" />
+      <object connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" object-ref="schemas/vehicle_rental/tables/payments" />
+      <object connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" object-ref="schemas/vehicle_rental/tables/customers" />
+      <object connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" object-ref="schemas/vehicle_rental/tables/bookings" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
@@ -45,10 +46,12 @@
         <condition column="payment_id" operator="=" value="3" active="true" />
       </filter>
     </filter-actions>
-    <filter-actions connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" dataset="vehicle_rental.vehicles" active-filter-id="cb4e7bfb-be09-4125-85df-458dc77f9f7e">
+    <filter-actions connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" dataset="vehicle_rental.bookings" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" dataset="vehicle_rental.vehicles" active-filter-id="7a9be530-f658-410f-9899-9513e5a524a4">
       <filter id="cb4e7bfb-be09-4125-85df-458dc77f9f7e" name="honda;" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="availability_status" operator="=" value="honda;" active="true" />
       </filter>
+      <filter id="7a9be530-f658-410f-9899-9513e5a524a4" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-actions>
     <filter-actions connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" dataset="tt_holding_db.permanent_employment" active-filter-id="" />
     <filter-actions connection-id="5cb9db39-b2c8-4b7b-a1f4-8e9f557ae3a6" dataset="vehicle_rental.booking" active-filter-id="EMPTY_FILTER">
