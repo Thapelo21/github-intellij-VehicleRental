@@ -1,0 +1,4 @@
+Booking ID,Customer ID,Vehicle ID,Start Date,End Date,Status
+10,3,4,2025-04-23,2025-04-30,Cancelled
+8,1,2,2025-04-17,2025-04-25,Cancelled
+9,3,3,2025-04-17,2025-04-23,Cancelled

@@ -1,0 +1,23 @@
+Rental History Report
+
+Booking ID: 10
+Customer ID: 3
+Vehicle ID: 4
+Start: 2025-04-23
+End: 2025-04-30
+Status: Cancelled
+
+Booking ID: 8
+Customer ID: 1
+Vehicle ID: 2
+Start: 2025-04-17
+End: 2025-04-25
+Status: Cancelled
+
+Booking ID: 9
+Customer ID: 3
+Vehicle ID: 3
+Start: 2025-04-17
+End: 2025-04-23
+Status: Cancelled
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.InvoiceController"
+      fx:id="root"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-padding: 30; -fx-background-color: #ffffff; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px; -fx-background-radius: 12;"
+      prefWidth="450" prefHeight="450">
+
+    <Label text="Payment Invoice" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <GridPane hgap="12" vgap="15" style="-fx-padding: 15;">
+        <Label text="Payment ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="paymentIdLabel" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Booking ID:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="bookingIdLabel" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Payment Date:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="paymentDateLabel" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Amount:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="amountLabel" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Late Fee:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="lateFeeLabel" GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Total:" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="totalLabel" GridPane.rowIndex="5" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+        <Label text="Payment Method:" GridPane.rowIndex="6" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+        <Label fx:id="methodLabel" GridPane.rowIndex="6" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+    </GridPane>
+
+    <Button text="Print Invoice" onAction="#printInvoice"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10 24;" />
+</VBox>

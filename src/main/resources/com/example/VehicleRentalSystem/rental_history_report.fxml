@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.RentalHistoryReportController"
+      spacing="20"
+      alignment="CENTER"
+      style="-fx-padding: 30; -fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px;"
+      prefWidth="700" prefHeight="500">
+
+    <Label text="Customer Rental History"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2d3436;" />
+
+    <TableView fx:id="historyTable" prefHeight="350" prefWidth="650" style="-fx-background-color: white; -fx-border-radius: 8; -fx-padding: 10;">
+        <columns>
+            <TableColumn fx:id="bookingIdCol" text="Booking ID" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="customerIdCol" text="Customer ID" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="vehicleIdCol" text="Vehicle ID" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="startCol" text="Start Date" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="endCol" text="End Date" style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="statusCol" text="Status" style="-fx-alignment: CENTER;" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Export to CSV" onAction="#exportToCSV"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+        <Button text="Export to PDF" onAction="#exportToPDF"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+        <Button text="Back" onAction="#goBack"
+                style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+    </HBox>
+</VBox>

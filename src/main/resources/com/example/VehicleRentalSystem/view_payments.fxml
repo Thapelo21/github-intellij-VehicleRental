@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.ViewPaymentsController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-padding: 30; -fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px;">
+
+    <Label text="Manage Payments"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2d3436;" />
+
+    <TableView fx:id="paymentTable" prefWidth="800" prefHeight="400" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-padding: 10;">
+        <columns>
+            <TableColumn fx:id="idCol" text="Payment ID" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="bookingIdCol" text="Booking ID" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="amountCol" text="Amount" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="lateFeeCol" text="Late Fee" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="methodCol" text="Method" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="dateCol" text="Date" style="-fx-alignment: CENTER;"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Update" onAction="#updatePayment"
+                style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+        <Button text="Delete" onAction="#deletePayment"
+                style="-fx-background-color: #d63031; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+        <Button text="Generate Invoice" onAction="#generateInvoice"
+                style="-fx-background-color: #0984e3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+        <Button text="Back" onAction="#goBack"
+                style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+    </HBox>
+
+</VBox>

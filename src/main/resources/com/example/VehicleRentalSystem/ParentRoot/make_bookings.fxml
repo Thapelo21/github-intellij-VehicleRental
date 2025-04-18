@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.BookingController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="450"
+      prefHeight="400"
+      style="-fx-padding: 30; -fx-background-color: #f4f4f4; -fx-border-color: #ddd; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <Label text="Make a New Booking"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <TextField fx:id="customerIdField"
+               promptText="Customer ID"
+               style="-fx-font-size: 14px; -fx-background-radius: 6; -fx-padding: 10;" />
+
+    <TextField fx:id="vehicleIdField"
+               promptText="Vehicle ID"
+               style="-fx-font-size: 14px; -fx-background-radius: 6; -fx-padding: 10;" />
+
+    <DatePicker fx:id="startDatePicker"
+                promptText="Rental Start Date"
+                style="-fx-font-size: 14px; -fx-background-radius: 6; -fx-padding: 10;" />
+
+    <DatePicker fx:id="endDatePicker"
+                promptText="Rental End Date"
+                style="-fx-font-size: 14px; -fx-background-radius: 6; -fx-padding: 10;" />
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Book"
+                onAction="#handleBooking"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-padding: 8 20;" />
+        <Button text="Back"
+                onAction="#goBack"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-padding: 8 20;" />
+    </HBox>
+</VBox>

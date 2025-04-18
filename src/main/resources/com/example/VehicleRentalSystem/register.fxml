@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.RegisterController"
+      alignment="CENTER" spacing="20"
+      style="-fx-padding: 30; -fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px;"
+      prefWidth="400">
+
+    <Label text="Register New User"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2d3436;"/>
+
+    <TextField fx:id="usernameField" promptText="Username"
+               style="-fx-padding: 10; -fx-background-radius: 8; -fx-border-radius: 8;"/>
+
+    <PasswordField fx:id="passwordField" promptText="Password"
+                   style="-fx-padding: 10; -fx-background-radius: 8; -fx-border-radius: 8;"/>
+
+    <ComboBox fx:id="roleBox" promptText="Select Role"
+              style="-fx-padding: 10; -fx-background-radius: 8; -fx-border-radius: 8;"/>
+
+    <Button text="Register" onAction="#handleRegister"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+
+    <Button text="Back to Login" onAction="#goToLogin"
+            style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.AvailableVehiclesReportController"
+      spacing="20"
+      alignment="TOP_CENTER"
+      prefWidth="750" prefHeight="500"
+      style="-fx-padding: 30; -fx-background-color: linear-gradient(to bottom, #ffffff, #f4f6f9); -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1;">
+
+    <Label text="📊 Available Vehicles Report"
+           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2d3436;" />
+
+    <TableView fx:id="vehicleTable"
+               prefHeight="350" prefWidth="700"
+               style="-fx-background-color: #ffffff; -fx-background-radius: 12; -fx-border-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.07), 10, 0, 0, 2);">
+        <columns>
+            <TableColumn fx:id="idCol" text="Vehicle ID" prefWidth="130"
+                         style="-fx-alignment: CENTER-LEFT; -fx-font-size: 13px;" />
+            <TableColumn fx:id="brandCol" text="Brand" prefWidth="130"
+                         style="-fx-alignment: CENTER-LEFT; -fx-font-size: 13px;" />
+            <TableColumn fx:id="modelCol" text="Model" prefWidth="130"
+                         style="-fx-alignment: CENTER-LEFT; -fx-font-size: 13px;" />
+            <TableColumn fx:id="categoryCol" text="Category" prefWidth="130"
+                         style="-fx-alignment: CENTER-LEFT; -fx-font-size: 13px;" />
+            <TableColumn fx:id="statusCol" text="Availability" prefWidth="130"
+                         style="-fx-alignment: CENTER; -fx-font-size: 13px;" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="⬇ Export to PDF"
+                onAction="#exportToPDF"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 10; -fx-padding: 10 24;" />
+        <Button text="⬅ Back"
+                onAction="#goBack"
+                style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 10; -fx-padding: 10 24;" />
+    </HBox>
+</VBox>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.VehicleRentalSystem.ManageVehiclesController"
+            prefWidth="800" prefHeight="600">
+
+    <top>
+        <Label text="Vehicle Management"
+               style="-fx-font-size: 24px; -fx-padding: 20px; -fx-text-fill: #2d3436;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px;">
+            <!-- Padding applied to the entire form -->
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Vehicle Input Form -->
+            <GridPane hgap="10" vgap="10">
+                <Label text="Brand:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="brandField" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-background-color: #f0f2f5; -fx-background-radius: 8; -fx-padding: 10;"/>
+
+                <Label text="Model:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="modelField" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-background-color: #f0f2f5; -fx-background-radius: 8; -fx-padding: 10;"/>
+
+                <Label text="Category:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="categoryField" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-background-color: #f0f2f5; -fx-background-radius: 8; -fx-padding: 10;"/>
+
+                <Label text="Price/Day:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="priceField" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-background-color: #f0f2f5; -fx-background-radius: 8; -fx-padding: 10;"/>
+
+                <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-size: 14px;"/>
+                <ComboBox fx:id="statusBox" GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-background-color: #f0f2f5; -fx-background-radius: 8; -fx-padding: 10;"/>
+            </GridPane>
+
+            <!-- Action Buttons -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Add Vehicle" onAction="#handleAdd" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+                <Button text="Update Vehicle" onAction="#handleUpdate" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+                <Button text="Delete Vehicle" onAction="#handleDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+                <Button text="Clear" onAction="#clearForm" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+                <Button text="Back" onAction="#handleBack" style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+            </HBox>
+
+            <!-- Vehicle Table -->
+            <TableView fx:id="vehicleTable" prefHeight="300" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-padding: 10;">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="brandCol" text="Brand" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="modelCol" text="Model" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="categoryCol" text="Category" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="priceCol" text="Price/Day" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="statusCol" text="Status" style="-fx-alignment: CENTER;"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

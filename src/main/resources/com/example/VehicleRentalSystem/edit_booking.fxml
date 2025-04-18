@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.EditBookingController"
+      alignment="CENTER"
+      spacing="15"
+      style="-fx-padding: 30;">
+
+    <Label text="Edit Booking"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="customerIdField" promptText="Customer ID" editable="false" />
+    <TextField fx:id="vehicleIdField" promptText="Vehicle ID" editable="false" />
+    <DatePicker fx:id="startDatePicker" promptText="Rental Start Date" />
+    <DatePicker fx:id="endDatePicker" promptText="Rental End Date" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Update" onAction="#handleUpdate"
+                style="-fx-background-color: #0984e3; -fx-text-fill: white;" />
+    </HBox>
+</VBox>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.ViewBookingListController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="800" prefHeight="550"
+      style="-fx-padding: 30; -fx-background-color: #f0f2f5; -fx-border-color: #ddd; -fx-border-width: 1px; -fx-border-radius: 12; -fx-background-radius: 12;">
+
+    <Label text="All Bookings"
+           style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <TableView fx:id="bookingsTable"
+               prefWidth="750"
+               style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);">
+        <columns>
+            <TableColumn fx:id="idCol" text="Booking ID" prefWidth="120"
+                         style="-fx-alignment: CENTER-LEFT;" />
+            <TableColumn fx:id="customerCol" text="Customer ID" prefWidth="120"
+                         style="-fx-alignment: CENTER-LEFT;" />
+            <TableColumn fx:id="vehicleCol" text="Vehicle ID" prefWidth="120"
+                         style="-fx-alignment: CENTER-LEFT;" />
+            <TableColumn fx:id="startCol" text="Start Date" prefWidth="120"
+                         style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="endCol" text="End Date" prefWidth="120"
+                         style="-fx-alignment: CENTER;" />
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="120"
+                         style="-fx-alignment: CENTER;" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Modify Booking"
+                onAction="#modifyBooking"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24; -fx-font-size: 14px;" />
+        <Button text="Cancel Booking"
+                onAction="#cancelBooking"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24; -fx-font-size: 14px;" />
+        <Button text="Back"
+                onAction="#goBack"
+                style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24; -fx-font-size: 14px;" />
+    </HBox>
+</VBox>

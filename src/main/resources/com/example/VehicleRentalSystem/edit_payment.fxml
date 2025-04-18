@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.EditPaymentController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="420" prefHeight="420"
+      style="-fx-padding: 30; -fx-background-color: #fdfefe; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1.2;">
+
+    <Label text="💳 Edit Payment"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <TextField fx:id="amountField" promptText="Amount"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;" />
+    <TextField fx:id="lateFeeField" promptText="Late Fee"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;" />
+    <ComboBox fx:id="methodBox" promptText="Payment Method"
+              style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;" />
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Update"
+                onAction="#handleUpdate"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 8; -fx-padding: 10 24;" />
+        <Button text="Cancel"
+                onAction="#closeWindow"
+                style="-fx-background-color: #7f8c8d; -fx-text-fill: white;" />
+    </HBox>
+
+</VBox>

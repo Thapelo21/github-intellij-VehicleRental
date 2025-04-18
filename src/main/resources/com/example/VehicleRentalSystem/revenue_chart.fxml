@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VehicleRentalSystem.RevenueChartController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 30; -fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #dcdde1; -fx-border-width: 1px;">
+
+    <Label text="Monthly Revenue Chart" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2d3436;" />
+
+    <BarChart fx:id="revenueChart" title="Revenue per Month" style="-fx-background-color: white; -fx-border-radius: 8; -fx-padding: 10;">
+        <xAxis>
+            <CategoryAxis label="Month" style="-fx-label-fill: #2d3436;"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Revenue (LSL)" style="-fx-label-fill: #2d3436;"/>
+        </yAxis>
+    </BarChart>
+
+    <Button text="Back" onAction="#goBack"
+            style="-fx-background-color: #636e72; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 24;"/>
+</VBox>
